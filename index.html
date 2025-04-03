@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Survey</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title" class="text-center">IT Survey</h1>
+            <p id="description" class="description text-center">Thank you for helping us with our research!</p>
+        </header>
+
+        <form id="survey-form" method="post" action="/submit-form">
+            <div class="form-group">
+                <label for="name" id="name-label">Name</label>
+                <input name="name" id="name" type="text" placeholder="Enter your name" class="form-control" required />
+            </div>
+
+            <div class="form-group">
+                <label for="email" id="email-label">Email</label>
+                <input name="email" id="email" type="email" placeholder="Enter your email" class="form-control"
+                    required />
+            </div>
+
+            <div class="form-group">
+                <label for="age" id="number-label">Age <span class="clue">(optional)</span></label>
+                <input name="age" id="age" type="number" placeholder="Age" min="10" max="100" step="1"
+                    class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <p>Which option best describes your current role?</p>
+                <select id="role" name="role" class="form-control" required>
+                    <option disabled selected value="">(select current role)</option>
+                    <option value="1">Student</option>
+                    <option value="2">Work and study</option>
+                    <option value="3">Registered employment</option>
+                    <option value="5">Freelance work</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>Did you attend college in the computer science field?</p>
+                <label for="college-yes">
+                    <input id="college-yes" name="college" type="radio" value="Yes" class="input-radio" required>
+                    Yes
+                </label>
+                <label for="college-no">
+                    <input id="college-no" name="college" type="radio" value="No" class="input-radio" required>
+                    No
+                </label>
+            </div>
+
+            <div class="form-group">
+                <p>What is your area of greatest interest?</p>
+                <select id="most-interested" name="most-interested" class="form-control" required>
+                    <option disabled selected value="">(select interest)</option>
+                    <option value="1">Software Development</option>
+                    <option value="2">Artificial Intelligence and Machine Learning</option>
+                    <option value="3">Cybersecurity</option>
+                    <option value="4">Cloud Computing</option>
+                    <option value="5">Data Analysis</option>
+                    <option value="6">UI/UX Design</option>
+                    <option value="7">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <p>What tools do you usually use?</p>
+                <label for="tools-html">
+                    <input id="tools-html" name="tools" type="checkbox" value="HTML" class="input-checkbox">HTML
+                </label>
+                <label for="tools-css">
+                    <input id="tools-css" name="tools" type="checkbox" value="CSS" class="input-checkbox">CSS
+                </label>
+                <label for="tools-js">
+                    <input id="tools-js" name="tools" type="checkbox" value="JavaScript"
+                        class="input-checkbox">JavaScript
+                </label>
+                <label for="tools-react">
+                    <input id="tools-react" name="tools" type="checkbox" value="React" class="input-checkbox">React.js
+                </label>
+                <label for="tools-node">
+                    <input id="tools-node" name="tools" type="checkbox" value="Node" class="input-checkbox">Node.js
+                </label>
+                <label for="tools-ts">
+                    <input id="tools-ts" name="tools" type="checkbox" value="TypeScript"
+                        class="input-checkbox">TypeScript
+                </label>
+                <label for="tools-python">
+                    <input id="tools-python" name="tools" type="checkbox" value="Python" class="input-checkbox">Python
+                </label>
+                <label for="tools-java">
+                    <input id="tools-java" name="tools" type="checkbox" value="Java" class="input-checkbox">Java
+                </label>
+                <label for="tools-c">
+                    <input id="tools-c" name="tools" type="checkbox" value="C" class="input-checkbox">C
+                </label>
+                <label for="tools-csharp">
+                    <input id="tools-csharp" name="tools" type="checkbox" value="C#" class="input-checkbox">C#
+                </label>
+                <label for="tools-dotnet">
+                    <input id="tools-dotnet" name="tools" type="checkbox" value=".NET" class="input-checkbox">.NET
+                </label>
+                <label for="tools-cplusplus">
+                    <input id="tools-cplusplus" name="tools" type="checkbox" value="C++" class="input-checkbox">C++
+                </label>
+                <label for="tools-php">
+                    <input id="tools-php" name="tools" type="checkbox" value="PHP" class="input-checkbox">PHP
+                </label>
+                <label for="tools-go">
+                    <input id="tools-go" name="tools" type="checkbox" value="Go" class="input-checkbox">Go (Golang)
+                </label>
+                <label for="tools-ruby">
+                    <input id="tools-ruby" name="tools" type="checkbox" value="Ruby" class="input-checkbox">Ruby
+                </label>
+                <label for="tools-rails">
+                    <input id="tools-rails" name="tools" type="checkbox" value="Rails" class="input-checkbox">Ruby on
+                    Rails
+                </label>
+            </div>
+
+            <div class="form-group">
+                <p>Tell us a little about your history with programming!</p>
+                <textarea name="history" placeholder="I started programming..." class="input-textarea"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
